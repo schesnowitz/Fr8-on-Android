@@ -1,12 +1,15 @@
 package com.chesnowitz.fr8quote;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.LogInCallback;
 import com.parse.ParseException;
@@ -76,7 +79,11 @@ public class CreateAccount extends AppCompatActivity {
       ParseUser.logInInBackground(email, password, new LogInCallback() {
         @Override
         public void done(ParseUser user, ParseException e) {
-
+          if (e == null) {
+             Log.v("The user logged in", user.getUsername());
+            startActivity(new Intent(CreateAccount.this, ConfirmationActivity.class));
+            Toast.makeText(CreateAccount.this, "Logged In", Toast.LENGTH_SHORT).show();
+          }
         }
       });
     }
