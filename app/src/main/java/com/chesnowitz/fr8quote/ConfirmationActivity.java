@@ -36,11 +36,15 @@ public class ConfirmationActivity extends AppCompatActivity {
         Log.i("Location", location.toString());
         ParseUser currentUser = ParseUser.getCurrentUser();
         ParseGeoPoint point = new ParseGeoPoint(location.getLatitude(), location.getLongitude());
+
         ParseObject userLocation = new ParseObject("DriverLocation");
-        userLocation.put("score", 5566);
         userLocation.put("location", point);
         userLocation.put("email", currentUser.getEmail());
-        userLocation.saveInBackground();
+        userLocation.put("latitude", location.getLatitude());
+        userLocation.put("longitude", location.getLongitude());
+        userLocation.put("speed", location.getSpeed());
+        userLocation.put("bearing", location.getBearing());
+        userLocation.saveEventually();
       }
 
       @Override
@@ -63,7 +67,7 @@ public class ConfirmationActivity extends AppCompatActivity {
       ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, 1);
 
     } else {
-      locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+      locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30000, 0, locationListener);
     }
   }
 
@@ -75,7 +79,7 @@ public class ConfirmationActivity extends AppCompatActivity {
 
       if (ContextCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) ==
               PackageManager.PERMISSION_GRANTED) {
-        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0, 0, locationListener);
+        locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30000, 0, locationListener);
       }
     }
   }
