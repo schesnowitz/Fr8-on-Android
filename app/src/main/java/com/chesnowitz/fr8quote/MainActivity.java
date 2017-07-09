@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     //Test code to see if the APP is working properly.
-    ParseObject object = new ParseObject("Sex");
-    object.put("user","steve");
+//    ParseObject object = new ParseObject("Test");
+//    object.put("user","steve");
 
 //    object.saveEventually(new SaveCallback() {
 //      @Override
@@ -57,6 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         break;
       case R.id.signUpButton:
         startActivity(new Intent(MainActivity.this, CreateAccount.class));
+        finish();
     }
   }
 }

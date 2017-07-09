@@ -83,6 +83,7 @@ public class CreateAccount extends AppCompatActivity {
              Log.v("The user logged in", user.getUsername());
             startActivity(new Intent(CreateAccount.this, ConfirmationActivity.class));
             Toast.makeText(CreateAccount.this, "Logged In", Toast.LENGTH_SHORT).show();
+            finish();
           }
         }
       });

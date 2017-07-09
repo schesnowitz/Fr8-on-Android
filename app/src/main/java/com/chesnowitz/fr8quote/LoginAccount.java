@@ -39,6 +39,7 @@ public class LoginAccount extends AppCompatActivity {
               if (e == null) {
                 Toast.makeText(LoginAccount.this, "Login Successful!", Toast.LENGTH_LONG).show();
                 startActivity(new Intent(LoginAccount.this, ConfirmationActivity.class));
+
               } else {
                 Toast.makeText(LoginAccount.this, "Check Credentials!", Toast.LENGTH_LONG).show();
                 }

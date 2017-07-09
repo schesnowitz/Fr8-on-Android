@@ -45,6 +45,7 @@ public class ConfirmationActivity extends AppCompatActivity {
         userLocation.put("speed", location.getSpeed());
         userLocation.put("bearing", location.getBearing());
         userLocation.saveEventually();
+
       }
 
       @Override
@@ -81,6 +82,7 @@ public class ConfirmationActivity extends AppCompatActivity {
               PackageManager.PERMISSION_GRANTED) {
         locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 30000, 0, locationListener);
       }
+      finish(); // removes old activities if user goes back
     }
   }
 
@@ -107,5 +109,8 @@ public class ConfirmationActivity extends AppCompatActivity {
       }
     }
     return super.onOptionsItemSelected(item);
+  }
+  @Override
+  public void onBackPressed() {
   }
 }
