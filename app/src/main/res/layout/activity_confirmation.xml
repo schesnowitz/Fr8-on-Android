@@ -7,13 +7,32 @@
     android:layout_height="match_parent"
     tools:context="com.chesnowitz.fr8quote.ConfirmationActivity">
 
-    <TextView
-        android:id="@+id/textView"
+
+    <Button
+        android:id="@+id/acceptLoadButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Confirmation Activity"
+        android:text="@string/acceptLoadButton"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintVertical_bias="0.965"/>
+
+    <Button
+        android:id="@+id/declineLoadButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/declineLoadButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.971"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.982"/>
 </android.support.constraint.ConstraintLayout>

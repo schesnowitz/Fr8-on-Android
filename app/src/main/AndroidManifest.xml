@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
     <application
         android:name=".Fr8QuoteApplication"
         android:allowBackup="true"
@@ -14,18 +15,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity" android:noHistory="true">
+        <activity
+            android:name=".MainActivity"
+            android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
 
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".CreateAccount" android:noHistory="true">
+        <activity
+            android:name=".CreateAccount"
+            android:noHistory="true">
         </activity>
-        <activity android:name=".LoginAccount" android:noHistory="true">
+        <activity
+            android:name=".LoginAccount"
+            android:noHistory="true">
         </activity>
-        <activity android:name=".ConfirmationActivity" android:noHistory="true">
+        <activity
+            android:name=".ConfirmationActivity"
+            android:noHistory="true">
+        </activity>
+        <activity android:name=".Hours_Of_Service_Activity">
         </activity>
     </application>
 

@@ -22,6 +22,7 @@ import com.parse.ParseUser;
 
 public class ConfirmationActivity extends AppCompatActivity {
 
+
   private LocationManager locationManager;
   private LocationListener locationListener;
 
@@ -40,6 +41,8 @@ public class ConfirmationActivity extends AppCompatActivity {
         ParseObject userLocation = new ParseObject("DriverLocation");
         userLocation.put("location", point);
         userLocation.put("email", currentUser.getEmail());
+        userLocation.put("id", currentUser.getObjectId());
+
         userLocation.put("latitude", location.getLatitude());
         userLocation.put("longitude", location.getLongitude());
         userLocation.put("speed", location.getSpeed());
@@ -113,4 +116,5 @@ public class ConfirmationActivity extends AppCompatActivity {
   @Override
   public void onBackPressed() {
   }
+
 }

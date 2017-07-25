@@ -7,6 +7,12 @@
     <string name="password">Password</string>
     <string name="create_account">Create Account</string>
     <string name="loginButton">Login</string>
+    <string name="onDutyNotDrivingButton">On Duty Not Druvng</string>
+    <string name="onDutyDrivingButton">On Duty Driving</string>
+    <string name="offDutyInSleeperButton">Off Duty In Sleeper</string>
+    <string name="offDutyButton">Off Duty</string>
+    <string name="acceptLoadButton">Accept Load</string>
+    <string name="declineLoadButton">Decline Load</string>
 
 
 </resources>

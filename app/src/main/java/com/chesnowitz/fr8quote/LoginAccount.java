@@ -45,7 +45,7 @@ public class LoginAccount extends AppCompatActivity {
                 }
             }
           });
-        }else {
+        } else {
           Toast.makeText(LoginAccount.this, "Please Enter Email and Passwowrd!", Toast.LENGTH_LONG).show();
         }
       }
